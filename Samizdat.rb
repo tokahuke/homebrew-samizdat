@@ -9,4 +9,16 @@ class Samizdat < Formula
         bin.install "samizdat"
         bin.install "samizdat-node"
     end
+
+    service do
+        run [
+            opt_bin/"samizdat-node",
+            "--data", "/var/lib/samizdat/node/",
+            "--hubs", "testbed.hubfederation.com"
+        ]
+        log_path "/var/log/samizdat-node-stdout.log"
+        error_log_path "/var/log/samizdat-node-stderr.log"
+        keep_alive true
+        restart_delay 1
+    end
 end
