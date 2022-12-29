@@ -3,7 +3,7 @@ class Samizdat < Formula
     homepage "https://github.com/tokahuke/samizdat"
     version "0.1.0"
     url "https://proxy.hubfederation.com/_series/r0Km0HptEt6Fhosmy7qxaKxyDtwHkzi0-eYbt1WatdM/latest/node/aarch64-apple-darwin/samizdat.tar.gz"
-    sha256 "aead90ec721a3bf2a30afaa10d879997fd6b84b661303beeabe1d0e2187fef04"
+    sha256 "9637e377b1ff084feaf4f56aee5c0bc73f158fc4134f8f52db82fbf3db2492e6"
     license "AGPLv3"
 
     def install
