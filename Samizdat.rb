@@ -2,8 +2,8 @@ class Samizdat < Formula
     desc "Samizdat: your content, available"
     homepage "https://github.com/tokahuke/samizdat"
     version "0.1.0"
-    url "https://proxy.hubfederation.com/_series//latest/node/aarch64-apple-darwin/samizdat.tar.gz"
-    sha256 "12127f04dbabd72e41dc6a5ce88dd110494cda491a741269906e1949ded2d287"
+    url "https://proxy.hubfederation.com/_series/r0Km0HptEt6Fhosmy7qxaKxyDtwHkzi0-eYbt1WatdM/latest/node/aarch64-apple-darwin/samizdat.tar.gz"
+    sha256 "d3ea9fa46d1670a00adaf19e887ee3c7caee2494a0c2de9c05ee8c5d99bbf389"
     license "AGPLv3"
 
     def install
@@ -21,5 +21,9 @@ class Samizdat < Formula
         error_log_path "/var/log/samizdat-node-stderr.log"
         keep_alive true
         restart_delay 1
+    end
+
+    def post_install
+        system "samizdat", "hub", "new", "testbed.hubfederation.com", "UseBoth"   
     end
 end
