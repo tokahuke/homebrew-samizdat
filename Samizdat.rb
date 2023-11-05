@@ -3,7 +3,7 @@ class Samizdat < Formula
     homepage "https://github.com/tokahuke/samizdat"
     version "0.1.0"
     url "https://proxy.hubfederation.com/_series/r0Km0HptEt6Fhosmy7qxaKxyDtwHkzi0-eYbt1WatdM/latest/node/aarch64-apple-darwin/samizdat.tar.gz"
-    # sha256 "4fbb5a93d8ef87339782736bba1bdbc05f9bd646b95b4fddd8d5c356083fb4c7"
+    # sha256 "bb58c41b9107118574c73dcde337adfcf6ef5e48e297e0d049938da2a203f94a"
     license "AGPLv3"
 
     def install
@@ -23,6 +23,6 @@ class Samizdat < Formula
     end
 
     def post_install
-        system "samizdat", "hub", "new", "testbed.hubfederation.com", "UseBoth"   
+        system "samizdat", "hub", "new", "testbed.hubfederation.com", "UseBoth"
     end
 end
