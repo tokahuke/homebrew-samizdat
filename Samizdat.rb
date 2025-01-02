@@ -6,8 +6,6 @@ class Samizdat < Formula
     revision 1
     license "AGPLv3"
 
-    depends_on arch: :aarch64
-
     def install
         bin.install "samizdat"
         bin.install "samizdat-node"
