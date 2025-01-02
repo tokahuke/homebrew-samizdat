@@ -2,9 +2,11 @@ class Samizdat < Formula
     desc "Samizdat: your content, available"
     homepage "https://github.com/tokahuke/samizdat"
     version "0.1.0"
-    url "https://proxy.hubfederation.com/get-samizdat/latest/node/aarch64-apple-darwin/samizdat.tar.gz"
-    # sha256 "87dc1d5e6ac12f71efe3f620eb6020bc88c9309f449a98bff32f01edb5ca69c2"
+    url "https://proxy.hubfederation.com/get-samizdat/latest/aarch64-apple-darwin/node/samizdat.tar.gz"
+    revision 1
     license "AGPLv3"
+
+    depends_on arch: :aarch64
 
     def install
         bin.install "samizdat"
@@ -23,6 +25,6 @@ class Samizdat < Formula
     end
 
     def post_install
-        system "samizdat", "hub", "new", "testbed.hubfederation.com", "UseBoth"
+        system "samizdat", "hub", "new", "testbed.hubfederation.com", "PreferIPv4"
     end
 end
