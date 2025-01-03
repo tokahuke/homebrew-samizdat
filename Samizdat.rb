@@ -23,6 +23,6 @@ class Samizdat < Formula
     end
 
     def post_install
-        system "samizdat", "hub", "new", "testbed.hubfederation.com", "PreferIPv4"
+        system "samizdat", "hub", "new", "testbed.hubfederation.com", "UseBoth"
     end
 end
