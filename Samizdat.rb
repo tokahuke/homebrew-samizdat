@@ -2,7 +2,7 @@ class Samizdat < Formula
     desc "Samizdat: your content, available"
     homepage "https://github.com/tokahuke/samizdat"
     version "0.1.0"
-    url "https://proxy.hubfederation.com/get-samizdat/latest/aarch64-apple-darwin/node/samizdat.tar.gz"
+    url "https://proxy.hubfederation.com/~get-samizdat/latest/aarch64-apple-darwin/node/samizdat.tar.gz"
     revision 1
     license "AGPLv3"
 
