@@ -3,14 +3,12 @@ class Samizdat < Formula
     homepage "https://github.com/tokahuke/samizdat"
     version "0.1.0"
     url "https://proxy.hubfederation.com/~get-samizdat/latest/aarch64-apple-darwin/samizdat-up/samizdat-up"
+    sha256 "c434d8228d19e484a7647af524e2439825ac7c759a16ea3d7ad46a617c4977cf"
     license "AGPLv3"
     depends_on arch: :arm64
 
     def install
-        # Brew sees the URL as a single file (no extraction); rename to
-        # /usr/local/bin/samizdat-up (or HOMEBREW_PREFIX/bin/samizdat-up
-        # on Apple Silicon).
-        bin.install Pathname(@downloader.cached_location) => "samizdat-up"
+        bin.install "samizdat-up"
     end
 
     def caveats; <<~EOS
@@ -20,10 +18,6 @@ class Samizdat < Formula
 
             sudo samizdat-up install node
 
-        Other components (Linux only; left here for reference):
-            sudo samizdat-up install hub
-            sudo samizdat-up install proxy
-
         To uninstall while preserving local data:
             sudo samizdat-up uninstall node
             brew uninstall samizdat
@@ -31,13 +25,12 @@ class Samizdat < Formula
         To wipe series private keys, bookmarks, and cached objects:
             sudo samizdat-up uninstall node --purge
 
-        To upgrade just the daemon binaries (without touching
-        samizdat-up itself):
+        To upgrade just the daemon binaries:
             sudo samizdat-up update
 
         Series keys + cached objects live at /var/lib/samizdat/. They
-        survive `brew uninstall` and `samizdat-up uninstall` unless you
-        pass `--purge`.
+        survive `brew uninstall` and `samizdat-up uninstall` unless
+        you pass `--purge`.
     EOS
     end
 end
