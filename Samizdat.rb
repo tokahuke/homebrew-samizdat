@@ -4,7 +4,7 @@ class Samizdat < Formula
     version "0.1.0"
     url "https://proxy.hubfederation.com/~get-samizdat/latest/aarch64-apple-darwin/samizdat-up/samizdat-up"
     license "AGPLv3"
-    depends_on arch: :aarch64
+    depends_on arch: :arm64
 
     def install
         # Brew sees the URL as a single file (no extraction); rename to
