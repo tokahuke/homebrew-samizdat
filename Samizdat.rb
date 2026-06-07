@@ -1,9 +1,9 @@
 class Samizdat < Formula
     desc "Samizdat: your content, available (installer + updater for the node)"
     homepage "https://github.com/tokahuke/samizdat"
-    version "0.3.1"
-    url "https://proxy.hubfederation.com/~get-samizdat/0.3.1/aarch64-apple-darwin/samizdat-up/samizdat-up"
-    sha256 "45e46759ca06d108ed1dfd150e4b22ea733084c5f5df4008d5a1d3209d604be4"
+    version "0.3.2"
+    url "https://proxy.hubfederation.com/~get-samizdat/0.3.2/aarch64-apple-darwin/samizdat-up/samizdat-up"
+    sha256 "993161f5eb16f7a23e742bf4e3725c366b728729c531cbd620d4e0172de67371"
     license "AGPLv3"
     depends_on arch: :arm64
 
